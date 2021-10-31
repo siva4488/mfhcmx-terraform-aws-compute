@@ -61,9 +61,3 @@ output "type_of_os_image" {
 output "vpc_id" {
   value = "${var.vpc_id}"
   }
-  
-output "ebs_volume_id" {
-  value = "${data.aws_instance.default.ebs_block_device.volume_id}"
-  }
-    
-    
