@@ -73,5 +73,5 @@ data "aws_instance" "default" {
 }
 
 data "aws_network_interface" "default" {
-  id = aws_instance.default.network_interface_id
+  id = data.aws_instance.default.network_interface_id
 }
