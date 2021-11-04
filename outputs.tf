@@ -31,7 +31,7 @@ output "key_pair" {
   } 
 
 output "mac_address" {
-  value = "${data.aws_instance.default.instance_id}"
+  value = "${data.aws_network_interface.default.mac_address}"
   }
  
 output "power_state" {
