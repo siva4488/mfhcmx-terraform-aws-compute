@@ -74,3 +74,12 @@ data "aws_instance" "default" {
 data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
+
+data "aws_ebs_volume" "ebs_volume" {
+  most_recent = true
+
+  filter {
+    name   = "volume-type"
+    values = ["gp2"]
+  }
+}
