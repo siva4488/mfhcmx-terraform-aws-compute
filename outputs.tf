@@ -65,7 +65,3 @@ output "vpc_id" {
 output "network_interface_id" {
   value = "${data.aws_instance.default.network_interface_id}"
   }
-
-output "root_volume_id" {
-  value = "${data.aws_instance.default.instances.attributes.root_block_device.volume_id}"
-  }
