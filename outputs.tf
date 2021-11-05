@@ -71,5 +71,5 @@ output "volume_id_data" {
   }
 
 output "volume_id" {
-  value = "${data.aws_instance.default.ebs_block_device.volume_id}"
+  value = "${data.aws_instance.default.ebs_block_device.*.volume_id}"
   }
