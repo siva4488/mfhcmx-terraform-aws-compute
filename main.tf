@@ -7,7 +7,6 @@ terraform {
   }
 }
 
-variable "user_data" {}
 variable "os_type" {}
 
 provider "aws" {
