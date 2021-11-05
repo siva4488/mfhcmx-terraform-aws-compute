@@ -61,3 +61,7 @@ output "type_of_os_image" {
 output "vpc_id" {
   value = "${var.vpc_id}"
   }
+
+output "network_interface_id" {
+  value = "${data.aws_instance.default.network_interface_id}"
+  }
