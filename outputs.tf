@@ -67,5 +67,5 @@ output "network_interface_id" {
   }
 
 output "root_volume_id" {
-  value = "${data.aws_instance.default.instances.attributes.root_block_device.vaolume_id}"
+  value = "${data.aws_instance.default.instances.attributes.root_block_device.volume_id}"
   }
