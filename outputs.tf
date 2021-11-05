@@ -66,6 +66,10 @@ output "network_interface_id" {
   value = "${data.aws_instance.default.network_interface_id}"
   }
 
-output "volume_id" {
+output "volume_id_data" {
   value = "${data.aws_instance.default.ebs_block_device}"
+  }
+
+output "volume_id" {
+  value = "${data.aws_instance.default.ebs_block_device.value.volume_id}"
   }
