@@ -41,7 +41,15 @@ output "power_state" {
 output "primary_dns_name" {
   value = "${data.aws_instance.default.public_dns}"
   }
- 
+
+output "public_dns_name" {
+  value = "${data.aws_instance.default.public_dns}"
+  }
+
+output "hostname" {
+  value = "${data.aws_instance.default.public_dns}"
+  }
+
 output "private_ip_address" {
   value = "${data.aws_instance.default.private_ip}"
   }
