@@ -39,7 +39,7 @@ output "power_state" {
   }
 
 output "primary_dns_name" {
-  value = "${data.aws_instance.default.public_dns}"
+  value = "${data.aws_instance.default.private_dns}"
   }
  
 output "private_ip_address" {
