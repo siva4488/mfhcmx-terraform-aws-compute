@@ -80,10 +80,6 @@ data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
 
-data "aws_security_group" "default" {
-  name = aws_security_group.default.*.name
-}
-
 data "aws_ebs_volume" "default" {
   most_recent = true
 
