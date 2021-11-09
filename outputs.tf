@@ -77,5 +77,3 @@ output "network_interface_id" {
 output "volume_id" {
   value = "${data.aws_instance.default.ebs_block_device.*.volume_id}"
   }
-
-output "security_group_name" { value = "${data.aws_security_group.default.id}" }
