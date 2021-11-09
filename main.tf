@@ -77,5 +77,5 @@ data "aws_network_interface" "default" {
 }
 
 data "aws_security_group" "default" {
-  name = var.sgname
+  name = ${var.sgname}
 }
