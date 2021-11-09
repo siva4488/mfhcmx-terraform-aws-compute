@@ -6,7 +6,9 @@ terraform {
     }
   }
 }
+
 variable "os_type" {}
+
 provider "aws" {
   # Configuration options
   access_key = "${var.access_key}"
@@ -14,6 +16,7 @@ provider "aws" {
   profile = "default"
   region  = "${var.region}"
 }
+
 data "aws_availability_zones" "available" {
   state = "available"
   filter {
@@ -21,6 +24,7 @@ data "aws_availability_zones" "available" {
     values = ["opt-in-not-required"]
    }
 }
+
 resource "aws_instance" "default" {
   ami = "${var.ami_id}"
   instance_type = "${var.instance_type}"
@@ -36,6 +40,7 @@ resource "aws_instance" "default" {
   Owner = "Siva"
   Name = "${var.instance_name}"}
   }
+
 resource "aws_security_group" "default" {
   name        = "${var.sgname}"
   description = "Allow SSH inbound traffic"
@@ -60,9 +65,11 @@ resource "aws_security_group" "default" {
     Name = "${var.instance_name}"
   }
 }
+
 data "aws_instance" "default" {
   instance_id = aws_instance.default.id
 }
+
 data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
