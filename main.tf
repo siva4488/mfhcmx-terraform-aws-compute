@@ -75,3 +75,7 @@ data "aws_instance" "default" {
 data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
+
+data "aws_security_group" "default" {
+  name = var.sgname
+}
