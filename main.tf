@@ -30,6 +30,7 @@ resource "aws_instance" "default" {
   instance_type = "${var.instance_type}"
   key_name = "${var.key_pair}"
   subnet_id = "${var.subnet_id}"
+  security_groups = [data.aws_security_group.default.id]
   ebs_block_device {
       device_name = "/dev/sdb"
       volume_size = "${var.volume_size}"
