@@ -75,7 +75,7 @@ data "aws_network_interface" "default" {
 }
 
 data "aws_security_group" "default" {
-  name = aws_security_group.default.instances.*.name
+  name = aws_security_group.default.instances.*.attributes.name
 }
 
 data "aws_ebs_volume" "default" {
