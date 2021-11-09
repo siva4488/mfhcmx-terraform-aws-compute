@@ -30,7 +30,7 @@ resource "aws_instance" "default" {
   instance_type = "${var.instance_type}"
   key_name = "${var.key_pair}"
   subnet_id = "${var.subnet_id}"
-
+  
   ebs_block_device {
       device_name = "/dev/sdb"
       volume_size = "${var.volume_size}"
@@ -39,7 +39,7 @@ resource "aws_instance" "default" {
                   }
   tags = {
   Owner = "Siva"
-  Name = "${var.instance_name}"}
+  Name = "${var.instance_name}"
   }
 
 
