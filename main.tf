@@ -70,6 +70,12 @@ data "aws_instance" "default" {
   instance_id = aws_instance.default.id
 }
 
+variable "security_group_id" {}
+
+data "aws_security_group" "default" {
+  id = var.security_group_id
+}
+
 data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
