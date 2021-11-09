@@ -74,7 +74,7 @@ data "aws_network_interface" "default" {
   id = data.aws_instance.default.network_interface_id
 }
 data "aws_security_group" "default" {
-  name = resources[4].aws_security_group.default.instances[0].attributes.name
+  name = aws_security_group.default.instances[0].attributes.name
 }
 
 data "aws_ebs_volume" "default" {
