@@ -1,4 +1,15 @@
 terraform {
+  
+  backend "http" {
+  address  ="https://taw-m1.swinfra.net/iac-controller/v1/243308662/terraform/demoAWS/backend"
+  lock_address = "https://taw-m1.swinfra.net/iac-controller/v1/243308662/terraform/demoAWS/bacend/lock"
+  unlock_address = "https://taw-m1.swinfra.net/iac-controller/v1/243308662/terraform/demoAWS/bacend/lock"
+  lock_method = "POST"
+  unlock_method = "DELETE"
+  username = "243308662/dndadmin243308662"
+  password = "Admin_1234"
+  skip_cert_verification = "true"
+    }
   required_providers {
     aws = {
       source = "hashicorp/aws"
