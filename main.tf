@@ -7,7 +7,7 @@ terraform {
   lock_method = "POST"
   unlock_method = "DELETE"
   username = "243308662/dndadmin243308662"
-  password = "Admin_1234"
+  password = "******"
   skip_cert_verification = "true"
     }
   required_providers {
